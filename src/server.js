@@ -9,7 +9,7 @@ import mongoose from 'mongoose';
 import passport from 'passport';
 import {Strategy as LocalStrategy} from 'passport-local';
 
-import User from '/src/server/data/model/User.js';
+import User from '/src/server/data/model/User.mjs';
 import dataRequests from '/src/server/data/dataRequests.js';
 import renderApp from '/src/server/renderApp';
 
@@ -147,7 +147,12 @@ server
 	})
 	.get('/',preloadData('usersList'))
 	.get('/users/:id',(req,res,next)=>{
-		preloadData('userDetails',req.params.id)(req,res,next)
+		preloadData('userDetails',req.params.id)(req,res,()=>{
+			if (!req.locals.exportVars[`loadedData/userDetails/${req.params.id}`]) {
+				return res.redirect('/404');
+			}
+			next();
+		})
 	})
 	.post('/register', upload.fields(registerFormConfig.fileInputs), async (req,res,next) => {
 		const formValues = prepareFormData(registerFormConfig,req);

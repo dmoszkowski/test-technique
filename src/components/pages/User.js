@@ -37,7 +37,7 @@ function User() {
 					<div className="columns is-vcentered">
 						<div className="column is-5">
 							<figure className="image is-4by3">
-								<img src={user.picture} alt="Image" title={displayName} />
+								<img className="user-picture" src={user.picture} alt="Image" title={displayName} />
 							</figure>
 						</div>
 						<div className="column is-6 is-offset-1">
@@ -47,6 +47,14 @@ function User() {
 							<h2 className="subtitle is-4">
 								{user.status}
 							</h2>
+							<a href={`mailto:${user.email}`} className="subtitle has-text-link is-6">
+								<span className="icon-text">
+									<span className="icon">
+										<i className="fas fa-envelope"></i>
+									</span>
+									<span>{user.email}</span>
+								</span>
+							</a>
 						</div>
 					</div>
 				</div>

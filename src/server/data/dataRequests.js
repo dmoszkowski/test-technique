@@ -1,4 +1,4 @@
-import User from './model/User.js';
+import User from './model/User.mjs';
 
 const extractUserData = (user, selectedFields) => {
 	const ret = {};
@@ -18,10 +18,10 @@ export default {
 	},
 	userDetails: async (req,userId) => {
 		try {
-			let selectedFields = 'firstName lastName status';
+			let selectedFields = 'firstName lastName status email';
 			const isCurrentUser = !!(req.user && (req.user === userId));
 			if (isCurrentUser) {
-				selectedFields += ' email newsletter';
+				selectedFields += ' newsletter';
 			}
 			const user = await User.findById(userId,`_id ${selectedFields}`);
 			if (user) {

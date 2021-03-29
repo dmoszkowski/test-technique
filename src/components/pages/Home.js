@@ -33,7 +33,7 @@ function Home() {
 										<div className="card large">
 											<div className="card-image">
 												<figure className="image is-4by3">
-													<img src={user.picture} alt="Image" title={displayName} />
+													<img className="user-picture" src={user.picture} alt="Image" title={displayName} />
 												</figure>
 											</div>
 											<div className="card-content">

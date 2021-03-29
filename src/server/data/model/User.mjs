@@ -1,8 +1,8 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose from 'mongoose';
 import bcrypt from "bcrypt";
 const saltRounds = 10;
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
 	firstName: String,
 	lastName: String,
 	email: {

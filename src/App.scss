@@ -7,3 +7,7 @@ $fullhd-enabled: false;
 @import "../node_modules/bulma/bulma";
 
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+.user-picture {
+	object-fit: contain;
+}
