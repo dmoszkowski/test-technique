@@ -32,7 +32,7 @@ passport.use(new LocalStrategy({usernameField: 'email'},async(email, password, d
 	try {
 		const user = await(User.findOne({ email },'_id email password'));
 		if (!user) {
-			return done(null, false, { message: 'Incorrect username.' });
+			return done(null, false, { message: 'Incorrect email.' });
 		}
 		if (!await(user.comparePassword(password))) {
 			return done(null, false, { message: 'Incorrect password.' });

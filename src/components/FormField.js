@@ -6,7 +6,7 @@ import clsx from 'clsx';
 
 
 function FormField({config, triggerValidation, formValuesRef, handleChange = ()=>{}, initialValue}) {
-	let initialVal = useSSRVar(`form/${config.name}/initialValue`, initialValue, true);
+	let initialVal = useSSRVar(`form/${config.name}/initialValue`, initialValue);
 	if (config.type === 'file') {
 		initialVal = undefined;
 	}

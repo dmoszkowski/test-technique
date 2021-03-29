@@ -5,7 +5,7 @@ export default (varName, defaultVal, onlyOnce = false) => {
 	const ssrVarsContainer = useContext(SSRVarsContainerContext);
 	if (varName in ssrVarsContainer) {
 		const varVal = ssrVarsContainer[varName];
-		if (onlyOnce && (typeof(window) !== undefined)) {
+		if (onlyOnce && (typeof(window) !== "undefined")) {
 			delete(ssrVarsContainer[varName]);
 		}
 		return varVal;

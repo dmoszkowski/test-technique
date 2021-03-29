@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
 import FormField from './FormField';
 import PropTypes from 'prop-types';
-import useSSRTemp from '/src/hooks/useSSRTemp';
+import useSSRVar from '/src/hooks/useSSRVar';
 
 function Form({config, action = "", method="post", initialValues={}, onCancel}) {
 	const [triggerValidation,setTriggerValidation] = useState(false);
-	const formErrorMessage = useSSRTemp('formError',undefined,[config]);
+	const formErrorMessage = useSSRVar('formError',undefined,true);
 	const formValues = useRef({});
 	const handleSubmit = event => {
 		setTriggerValidation(!triggerValidation);
