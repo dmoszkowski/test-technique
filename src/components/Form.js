@@ -5,7 +5,7 @@ import useSSRVar from '/src/hooks/useSSRVar';
 
 function Form({config, action = "", method="post", initialValues={}, onCancel}) {
 	const [triggerValidation,setTriggerValidation] = useState(false);
-	const formErrorMessage = useSSRVar('formError');
+	const formErrorMessage = useSSRVar('formError',undefined,true);
 	const formValues = useRef({});
 	const handleSubmit = event => {
 		setTriggerValidation(!triggerValidation);
