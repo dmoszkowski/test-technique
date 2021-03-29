@@ -1,6 +1,6 @@
 {
-	"name": "my-razzle-app",
-	"version": "4.0.3",
+	"name": "test-technique",
+	"version": "1.0.0",
 	"license": "MIT",
 	"scripts": {
 		"start": "razzle build --noninteractive && NODE_ENV=production node build/server.js",
