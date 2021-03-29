@@ -39,7 +39,7 @@ export default createFormConfig({
 			name: "picture",
 			label: "Picture",
 			type: "file",
-			accept: "image/x-png,image/gif,image/jpeg",
+			accept: "image/png,image/gif,image/jpeg",
 		},
 		{
 			name: "newsletter",
