@@ -32,3 +32,34 @@ Exemple :
 ```bash
 PORT=80 yarn start
 ```
+
+## Pré-remplir la base de données avec des faux comptes utilisateurs
+
+Un script permet d'insérer dans la BDD des utilisateurs aléatoires à partir de l'API [randomuser.me](https://randomuser.me/) :
+
+Avec yarn :
+```bash
+yarn dbUsers create [nbUsers]
+```
+
+Ou avec npm :
+```bash
+npm run dbUsers create [nbUsers]
+```
+
+[nbUsers] argument facultatif permettant de spécifier le nombre d'utilisateurs à créer et ajouter à la base de données
+(par défaut: 10)
+
+
+## Supprimer tous les utilisateurs de la base de données
+
+
+Avec yarn :
+```bash
+yarn dbUsers remove
+```
+
+Ou avec npm :
+```bash
+npm run dbUsers remove
+```

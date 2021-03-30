@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"license": "MIT",
 	"scripts": {
-		"start": "razzle build --noninteractive && NODE_ENV=production node build/server.js",
+		"start": "razzle build --noninteractive && node build/server.js",
+		"dbUsers": "node src/server/scripts/dbUsers.mjs",
 		"dev": "razzle start",
 		"build": "razzle build",
 		"test": "razzle test --env=jsdom",
