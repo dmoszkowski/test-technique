@@ -48,8 +48,9 @@ npm run dbUsers create [nbUsers]
 ```
 
 [nbUsers] argument facultatif permettant de spécifier le nombre d'utilisateurs à créer et ajouter à la base de données
-(par défaut: 10)
+(par défaut: 10).
 
+Les faux utilisateurs générés automatiquement ont tous comme mot de passe "Test0123" pour pouvoir tester la connexion à leur compte.
 
 ## Supprimer tous les utilisateurs de la base de données
 
