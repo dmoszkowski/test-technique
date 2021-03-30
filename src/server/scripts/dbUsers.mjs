@@ -31,6 +31,7 @@ import User from '../data/model/User.mjs';
 					firstName: u.name.first,
 					lastName: (Math.random() < 0.8) ? u.name.last : undefined,
 					email: u.email,
+					password: "Test0123",
 					status: "Teacher,Teacher assistant,Student".split(',')[Math.floor(Math.random() * 3.75)],
 					picture: {
 						fileName: "picture.jpg",
